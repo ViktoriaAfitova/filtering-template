@@ -3,7 +3,12 @@
   justify-content: space-around;
   padding: 24px;
 }
-
+  
+.filterContainer {
+  border: 1px solid #CFCFE4;
+  border-radius: 18px;
+}
+  
 .coursesContainer {
   max-width: 567px; 
   display: flex;
