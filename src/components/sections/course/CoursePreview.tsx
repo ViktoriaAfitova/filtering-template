@@ -20,6 +20,7 @@ export const CoursePreview = ({ name, image, bgColor }: Props) => {
       <div
         style={{
           backgroundColor: bgColor,
+          height: '162px',
           borderTopLeftRadius: '18px',
           borderTopRightRadius: '18px',
         }}

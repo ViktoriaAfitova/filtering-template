@@ -17,20 +17,17 @@ function CourseFilter<T extends string>({
   onChange,
 }: Props<T>) {
   return (
-    <div>
-      {/* <p style={{ color: oppositeColor ? '#FFF' : '#39414B' }}>{title}</p> */}
-      <div className={style.filterGroup}>
-        {options.map((option) => (
-          <button
-            className={`${style.filterItem} ${option.value === value ? style.oppositeColor : ''}`}
-            type='button'
-            key={option.value}
-            onClick={() => onChange(option.value)}
-          >
-            {option.title}
-          </button>
-        ))}
-      </div>
+    <div className={style.filterGroup}>
+      {options.map((option) => (
+        <button
+          className={`${style.filterItem} ${option.value === value ? style.oppositeColor : ''}`}
+          type='button'
+          key={option.value}
+          onClick={() => onChange(option.value)}
+        >
+          {option.title}
+        </button>
+      ))}
     </div>
   );
 }

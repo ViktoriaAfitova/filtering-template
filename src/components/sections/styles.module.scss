@@ -1,17 +1,33 @@
 .section {
   display: flex;
-  justify-content: space-around;
-  padding: 24px;
-}
-  
-.filterContainer {
-  border: 1px solid #CFCFE4;
-  border-radius: 18px;
+  padding: 24px;  
 }
   
 .coursesContainer {
-  max-width: 567px; 
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+}
+
+.notFoundCourseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+  .section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .filterContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .coursesContainer {
+    justify-content: center;
+  }
 }

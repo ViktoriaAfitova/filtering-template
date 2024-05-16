@@ -9,8 +9,10 @@
   .image {
     width: 144px; 
     height: auto;
+    display: block;
+    margin: auto;
   }
-
+ 
   .name {
     margin: 12px 18px 18px;
   }
@@ -19,20 +21,52 @@
 .filterGroup {
   display: flex;
   flex-direction: column;
+  width: 240px;
+  height: 210px;
+  border: 1px solid #CFCFE4;
+  border-radius: 18px;
+  padding: 12px;
+  margin-right: 24px;
 }
 
 .filterItem {
   color: #39414B;
   background-color: transparent;
   border: none;
-}
-
-.filterItem.active {
-  background-color: #5FBF77;
-  color: #FFF;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.1px;
+  padding: 10px;
+  text-align: left;
 }
 
 .oppositeColor {
   background-color: #5FBF77;
-  color: #FFF;
+  color: #FFF; border: 
+  1px solid #5FBF77;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 1531px) {
+  .card {
+    width: 393px;
+  }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1132px) {
+  .card {
+    width: 393px;
+  }
+}
+
+@media screen and (max-width: 1131px) and (min-width: 903px) {
+  .card {
+    width: 253px;
+  }
+}
+
+@media screen and (max-width: 902px) {
+  .card {
+    width: 177px;
+  }
 }

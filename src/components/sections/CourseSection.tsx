@@ -4,6 +4,10 @@ import { getCourse } from '../../api/api';
 import CourseFilter from './course/CourseFilter';
 import style from './styles.module.scss';
 
+const NOT_FOUND_COURSE_TITLE = 'УПС!';
+const NOT_FOUND_COURSE_DESCRIPTION =
+  'На данный момент нет курсов, соответствующих выбранному фильтру.';
+
 export interface FilterOption<T> {
   value: T;
   title: string;
@@ -88,12 +92,10 @@ export const CourseSection = () => {
       </div>
       <div className={style.coursesContainer}>
         {filteredCourses.length === 0 ? (
-          <>
-            <h1>УПС!</h1>
-            <p>
-              На данный момент нет курсов, соответствующих выбранному фильтру.
-            </p>
-          </>
+          <div className={style.notFoundCourseContainer}>
+            <h1>{NOT_FOUND_COURSE_TITLE}</h1>
+            <p>{NOT_FOUND_COURSE_DESCRIPTION}</p>
+          </div>
         ) : (
           filteredCourses.map((course) => (
             <CoursePreview
